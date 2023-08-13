@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter city name" spellcheck="false" id="search">
+            <button>
+                <img src="/images/search.png"></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name!</p>
+        </div>
+        <div class="weather">
+            <iframe src="/images/clear.svg" frameborder="0"
+            class="weather-icon"></iframe>
+            <iframe class="temp-c" src="/images/thermometer-celsius.svg" frameborder="0"></iframe>
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">Tehran</h2>
+            <div class="detials">
+                <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+                        <defs>
+                            <linearGradient id="a" x1="220" y1="137.65" x2="292" y2="262.35" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#d4d7dd"/>
+                                <stop offset="0.45" stop-color="#d4d7dd"/>
+                                <stop offset="1" stop-color="#bec1c6"/>
+                            </linearGradient>
+                            <linearGradient id="b" y1="193.65" y2="318.35" xlink:href="#a"/>
+                            <linearGradient id="c" y1="249.65" y2="374.35" xlink:href="#a"/>
+                        </defs>
+                    
+                        <!-- layer-1 -->
+                        <line x1="136" y1="200" x2="376" y2="200" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#a)">
+                            <animateTransform
+                                attributeName="transform"
+                                additive="sum"
+                                type="translate"
+                                values="-48 0; 48 0; -48 0"
+                                dur="6s"
+                                repeatCount="indefinite"/>
+                        </line>
+                    
+                        <!-- layer-2 -->
+                        <line x1="136" y1="256" x2="376" y2="256" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#b)">
+                            <animateTransform
+                                attributeName="transform"
+                                additive="sum"
+                                type="translate"
+                                values="-48 0; 48 0; -48 0"
+                                begin="-1.5s"
+                                dur="6s"
+                                repeatCount="indefinite"/>
+                        </line>
+                    
+                        <!-- layer-3 -->
+                        <line x1="136" y1="312" x2="376" y2="312" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#c)">
+                            <animateTransform
+                                attributeName="transform"
+                                additive="sum"
+                                type="translate"
+                                values="48 0; -48 0; 48 0"
+                                dur="6s"
+                                repeatCount="indefinite"/>
+                        </line>
+                    </svg>
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+                        <defs>
+                            <linearGradient id="a" x1="138.48" y1="5.12" x2="224.17" y2="153.53" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#d4d7dd"/>
+                                <stop offset="0.45" stop-color="#d4d7dd"/>
+                                <stop offset="1" stop-color="#bec1c6"/>
+                            </linearGradient>
+                            <linearGradient id="b" x1="77.66" y1="96.23" x2="168.99" y2="254.41" xlink:href="#a"/>
+                            <linearGradient id="c" x1="90" y1="185.61" x2="102" y2="206.39" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#fde68a"/>
+                                <stop offset="0.45" stop-color="#fde68a"/>
+                                <stop offset="1" stop-color="#fde171"/>
+                            </linearGradient>
+                            <linearGradient id="d" x1="174" y1="185.61" x2="186" y2="206.39" xlink:href="#c"/>
+                            <linearGradient id="e" x1="258" y1="185.61" x2="270" y2="206.39" xlink:href="#c"/>
+                            <linearGradient id="f" x1="216" y1="245.61" x2="228" y2="266.39" xlink:href="#c"/>
+                            <linearGradient id="g" x1="300" y1="245.61" x2="312" y2="266.39" xlink:href="#c"/>
+                            <linearGradient id="h" x1="384" y1="245.61" x2="396" y2="266.39" xlink:href="#c"/>
+                            <linearGradient id="i" x1="166" y1="305.61" x2="178" y2="326.39" xlink:href="#c"/>
+                            <linearGradient id="j" x1="250" y1="305.61" x2="262" y2="326.39" xlink:href="#c"/>
+                            <linearGradient id="k" x1="334" y1="305.61" x2="346" y2="326.39" xlink:href="#c"/>
+                            <symbol id="l" viewBox="0 0 348 240">
+                                <!-- blow-1 -->
+                                <path d="M267.16,24.29A40,40,0,1,1,296,92H12" fill="none" stroke-dasharray="148" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#a)">
+                                    <animate attributeName="stroke-dashoffset" values="0; 2960" dur="6s" repeatCount="indefinite"/>
+                                </path>
+                    
+                                <!-- blow-2 -->
+                                <path d="M151.16,215.71A40,40,0,1,0,180,148H12" fill="none" stroke-dasharray="110" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#b)">
+                                    <animate attributeName="stroke-dashoffset" values="0; 1540" dur="6s" repeatCount="indefinite"/>
+                                </path>
+                            </symbol>
+                        </defs>
+                    
+                        <g opacity="0">
+                            <!-- dust-1 -->
+                            <circle cx="96" cy="196" r="12" fill="url(#c)"/>
+                    
+                            <!-- dust-4 -->
+                            <circle cx="222" cy="256" r="12" fill="url(#f)"/>
+                    
+                            <!-- dust-7 -->
+                            <circle cx="172" cy="316" r="12" fill="url(#i)"/>
+                    
+                            <animateTransform
+                                id="x1"
+                                attributeName="transform"
+                                additive="sum"
+                                type="translate"
+                                values="-24 0; 24 0"
+                                begin="1s; x1.end+1.17s"
+                                dur=".83s"/>
+                    
+                            <animate
+                                id="y1"
+                                attributeName="opacity"
+                                values="0; 1; 1; 0"
+                                begin="1s; y1.end+1.17s"
+                                dur=".83s"
+                                keyTimes="0; .17; .83; 1"/>
+                        </g>
+                    
+                        <g opacity="0">
+                            <!-- dust-2 -->
+                            <circle cx="180" cy="196" r="12" fill="url(#d)"/>
+                    
+                            <!-- dust-5 -->
+                            <circle cx="306" cy="256" r="12" fill="url(#g)"/>
+                    
+                            <!-- dust-8 -->
+                            <circle cx="256" cy="316" r="12" fill="url(#j)"/>
+                    
+                            <animateTransform
+                                id="x2"
+                                attributeName="transform"
+                                additive="sum"
+                                type="translate"
+                                values="-24 0; 24 0"
+                                begin=".5s; x2.end+1.17s"
+                                dur=".83s"/>
+                    
+                            <animate
+                                id="y2"
+                                attributeName="opacity"
+                                values="0; 1; 1; 0"
+                                begin=".5s; y2.end+1.17s"
+                                dur=".83s"
+                                keyTimes="0; .17; .83; 1"/>
+                        </g>
+                    
+                        <g opacity="0">
+                            <!-- dust-3 -->
+                            <circle cx="264" cy="196" r="12" fill="url(#e)"/>
+                    
+                            <!-- dust-6 -->
+                            <circle cx="390" cy="256" r="12" fill="url(#h)"/>
+                    
+                            <!-- dust-9 -->
+                            <circle cx="340" cy="316" r="12" fill="url(#k)"/>
+                    
+                            <animateTransform
+                                id="x3"
+                                attributeName="transform"
+                                additive="sum"
+                                type="translate"
+                                values="-24 0; 24 0"
+                                begin="0s; x3.end+1.17s"
+                                dur=".83s"/>
+                    
+                            <animate
+                                id="y3"
+                                attributeName="opacity"
+                                values="0; 1; 1; 0"
+                                begin="0s; y3.end+1.17s"
+                                dur=".83s"
+                                keyTimes="0; .17; .83; 1"/>
+                        </g>
+                    
+                        <use width="348" height="240" transform="translate(83 136)" xlink:href="#l"/>
+                    </svg>
+                    <div>
+                        <p class="wind">20km/h</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+    <script src="/index.js"></script>
+    
+    
+</body>
+</html>
